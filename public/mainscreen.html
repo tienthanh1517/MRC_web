@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Screen</title>
+    <link rel="stylesheet" href="CSS/mainscreen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Thêm Chart.js -->
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <i class="fa-solid fa-user-large"></i>
+            <div>
+                <h2 id="username-display">Welcome</h2>
+                <p id="username-name">User</p>
+            </div>
+            <button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+        </div>
+
+        <div id="dashboard">
+            <!-- Cột chứa hai đồ thị -->
+            <div id="chart-column">
+                <canvas id="Waterlevel_Chart"></canvas>
+                <canvas id="Speed_RainfallChart"></canvas>
+            </div>
+            <!-- Ô vuông thông tin -->
+            <div class="info-box">
+                <div class="monitoring-container">
+                    <div id="values_of_monitoring">
+                        <div class="water-level-info">
+                            <i class="fa-solid fa-arrow-up-from-water-pump"></i>
+                            <span id="water-level-display">Water levels: 0</span>
+                        </div>
+                        <div class="rainfall-speed-info">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span id="rainfall-speed-display">Rainfall Speed: 0</span>
+                        </div>
+                    </div>
+
+                    <div id="toggle-container">
+                        <div id="Alarm_toggle">
+                            <div class="alarm-header">
+                                <p><i class="fa-solid fa-bell"></i> Alarm here</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="buzzer-toggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div id="excel_data">
+                            <p>meooo</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div id="AI_content">
+                    <div id="header-AIcontent">
+                        <img src="https://i.postimg.cc/hGYH8CK3/Tensor.png" alt="" width="70" height="70">
+                        <h2>AI Model Dashboard</h2>
+                        <h2 id="sd-card"><i class="fa-solid fa-sd-card"></i> SD Card: </h2>
+                    </div>
+
+                    <div id="AI_content_data">
+                        <div id="AI_status">
+                            <p>Situational Prediction</p>
+                        </div>
+
+                        <div id="light_of_status">
+
+                        </div>
+
+                        <div id="content_predict">
+                            <p>Your sliding content goes here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="footer">
+                    <div id="pictures">
+                        <img src="https://i.postimg.cc/bJfRhprx/cx0-edom-400x400-Photoroom.png" alt="" width="100"
+                            height="100">
+                        <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/6/6c/Logo_Dai_hoc_Can_Tho.svg/1200px-Logo_Dai_hoc_Can_Tho.svg.png"
+                            alt="" width="100" height="100">
+                        <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/4/49/Seal_of_ASEAN.svg/800px-Seal_of_ASEAN.svg.png"
+                            alt="" width="100" height="100">
+                    </div>
+
+                    <div id="content-footer">
+                        <p>ASEAN-MRC Technology Competition 2024</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure?</p>
+            <button id="confirm-yes">Yes</button>
+            <button id="confirm-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script type="module" src="Scripts/mainscreen.js"></script>
+</body>
+
+</html>
